@@ -1,0 +1,21 @@
+data:
+  train_dir: data/toothbrush/train
+  test_dir: data/toothbrush/test
+  ground_truth_dir: data/toothbrush/ground_truth
+  batch_size: 8
+  patch_size: 14
+  height: 1120
+  width: 1120
+  crop:
+    left: 200
+    right: 200
+    top: 0
+    bottom: 0
+
+model:
+  backbone: vit_base_patch14_reg4_dinov2.lvd142m
+  d_reduced: 12
+  multi_scale_features: true
+
+inference:
+  k: 1.6
